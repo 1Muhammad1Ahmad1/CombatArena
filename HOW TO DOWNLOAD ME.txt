@@ -1,0 +1,31 @@
+HOW TO DOWNLOAD AND PLAY COMBATARENA (Windows)
+==============================================
+
+Do NOT use the green "Code -> Download ZIP" button. That only gives you the source code,
+not the game.
+
+1. Download the game here (about 500 MB):
+
+   https://github.com/1Muhammad1Ahmad1/CombatArena/releases/download/v1.0/CombatArena.exe
+
+   (Release page: https://github.com/1Muhammad1Ahmad1/CombatArena/releases/tag/v1.0)
+
+2. Double-click CombatArena.exe. No install, no account, works offline.
+
+3. If Windows shows "Windows protected your PC", click "More info", then "Run anyway".
+   (The game is not digitally signed, so Windows warns about it.)
+
+
+CONTROLS
+--------
+W A S D        Move
+Mouse          Look
+Left mouse     Fire
+Right mouse    Aim / sniper scope
+Q              Switch weapon
+R              Reload
+Left Shift     Sprint
+Space          Jump
+C              Crouch (double-tap C while moving to slide)
+Z              Prone
+Esc            Pause
