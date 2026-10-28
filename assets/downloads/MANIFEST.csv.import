@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://ctpo726gn711l"
+
+[deps]
+
+files=["res://assets/downloads/MANIFEST.source.translation", "res://assets/downloads/MANIFEST.url.translation", "res://assets/downloads/MANIFEST.licence.translation", "res://assets/downloads/MANIFEST.attribution.translation", "res://assets/downloads/MANIFEST.downloaded.translation", "res://assets/downloads/MANIFEST.map.translation", "res://assets/downloads/MANIFEST.category.translation", "res://assets/downloads/MANIFEST.zip.translation", "res://assets/downloads/MANIFEST.files.translation"]
+
+source_file="res://assets/downloads/MANIFEST.csv"
+dest_files=["res://assets/downloads/MANIFEST.source.translation", "res://assets/downloads/MANIFEST.url.translation", "res://assets/downloads/MANIFEST.licence.translation", "res://assets/downloads/MANIFEST.attribution.translation", "res://assets/downloads/MANIFEST.downloaded.translation", "res://assets/downloads/MANIFEST.map.translation", "res://assets/downloads/MANIFEST.category.translation", "res://assets/downloads/MANIFEST.zip.translation", "res://assets/downloads/MANIFEST.files.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

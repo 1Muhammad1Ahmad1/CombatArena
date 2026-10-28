@@ -1,0 +1,74 @@
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:367)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:370)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:373)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:367)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:370)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:373)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:367)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:370)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:373)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_height is ceiled to cell_height voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:367)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_max_climb is floored to cell_height voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:370)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: Property agent_radius is ceiled to cell_size voxel units and loses precision.
+   at: generator_bake_from_source_geometry_data (modules/navigation_3d/3d/nav_mesh_generator_3d.cpp:373)
+   GDScript backtrace (most recent call first):
+       [0] bake_navigation (res://scripts/maps/map_base.gd:47)
+       [1] start (res://scripts/game/match.gd:50)
+       [2] start_match (res://scripts/main.gd:157)
+WARNING: 4 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)

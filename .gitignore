@@ -1,0 +1,9 @@
+.godot/
+build/
+*.tmp
+*.translation
+export_credentials.cfg
+build_logs/
+assets/incoming/
+assets/downloads/_zips/
+assets/mixamo/

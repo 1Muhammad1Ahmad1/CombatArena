@@ -1,0 +1,156 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[PASS] MENUS | Main menu shows START GAME / SETTINGS / EXIT GAME | buttons: START GAME / SETTINGS / EXIT GAME
+[PASS] MENUS | Start Game opens map selection | current menu script: res://scripts/ui/map_select.gd
+[PASS] MENUS | Map selection lists exactly 3 maps | 3 map cards
+[PASS] MENUS | Back returns to main menu | current menu script: res://scripts/ui/main_menu.gd
+[PASS] MENUS | Settings opens from main menu | settings overlay present: true
+[PASS] MENUS | Settings change applies and persists to disk | sensitivity runtime=1.75 saved=1.75 (C:/Users/HC/AppData/Roaming/Godot/app_userdata/CombatArena/settings.cfg)
+[PASS] MENUS | Graphics preset applies | quality=2 msaa=1
+[PASS] MENUS | Settings BACK closes overlay | overlay present: false
+[NOT TESTED] MENUS | Exit Game quits application | EXIT GAME is connected to SceneTree.quit(); not pressed here because it would end the test process
+[PASS] MAPS | INDUSTRIAL WAREHOUSE loads | match started: true
+[PASS] MAPS | INDUSTRIAL WAREHOUSE navigation mesh baked and synced | 461 navmesh polygons, map ready=true
+[PASS] MAPS | INDUSTRIAL WAREHOUSE spawn locations valid (on navmesh, no geometry overlap) | 11 bot + 4 player spawns valid
+[PASS] MAPS | INDUSTRIAL WAREHOUSE navigation connects all spawns/patrol points (no inaccessible bot positions) | 23 targets reachable from (28.0, 0.5, -2.0)
+[PASS] BOTS | INDUSTRIAL WAREHOUSE exactly 3 active bot slots | active=3 nodes=3
+[PASS] BOTS | INDUSTRIAL WAREHOUSE bots move and navigate | 3/3 bots moved > 1.5 m in 4 s
+[PASS] WEAPONS | INDUSTRIAL WAREHOUSE assault rifle fires and damages bot | bot HP 100 -> 79, AR ammo 30 -> 29
+[PASS] COMBAT | INDUSTRIAL WAREHOUSE bot health reaches 0 and bot dies | alive=false after 5 more shots, death events +1, kills +1
+[PASS] COMBAT | INDUSTRIAL WAREHOUSE no repeated bot death events | death events +1 after extra damage on corpse
+[PASS] HUD | INDUSTRIAL WAREHOUSE kill counter updates | label: 'KILLS  1      DEATHS  0'
+[PASS] BOTS | INDUSTRIAL WAREHOUSE bot respawns after 3 seconds | alive at ~2.9 s: false, alive at ~3.3 s: true, active=3
+[PASS] WEAPONS | INDUSTRIAL WAREHOUSE Q switches to sniper and back | after 1st Q cur=true, after 2nd Q cur=0
+[PASS] WEAPONS | INDUSTRIAL WAREHOUSE ammo persists across switches | AR ammo 25 -> 25
+[PASS] WEAPONS | INDUSTRIAL WAREHOUSE switching cannot bypass fire rate | shot1=true, shot ~1.1 s later blocked=true, shot after 1.3 s fired=true
+[PASS] WEAPONS | INDUSTRIAL WAREHOUSE sniper scope works | scoped=true fov=14.0 overlay=true
+[PASS] WEAPONS | INDUSTRIAL WAREHOUSE sniper fires and headshot kills | bot HP 100 -> 0 (95 dmg x2.5 head)
+[PASS] WEAPONS | INDUSTRIAL WAREHOUSE reload refills magazine from reserve | started=true ammo=30 reserve 180 -> 153
+[PASS] HUD | INDUSTRIAL WAREHOUSE HUD shows real health and ammo | hp label '100' (hp 100), ammo label '30' (ammo 30)
+[PASS] BOTS | INDUSTRIAL WAREHOUSE bot detects player | bot state=COMBAT awareness=1.00
+[PASS] BOTS | INDUSTRIAL WAREHOUSE bot aims and fires | 2 shots fired
+[PASS] COMBAT | INDUSTRIAL WAREHOUSE bot bullets reduce player health | player HP 100 -> 84, 2 hits / 2 shots
+[PASS] HUD | INDUSTRIAL WAREHOUSE damage indicator shown | 2 active indicators
+[PASS] COMBAT | INDUSTRIAL WAREHOUSE player death counted exactly once | deaths 0 -> 1, alive=false
+[PASS] HUD | INDUSTRIAL WAREHOUSE death counter updates | label: 'KILLS  2      DEATHS  1'
+[PASS] COMBAT | INDUSTRIAL WAREHOUSE player respawns with 100 HP | alive=true hp=100
+[PASS] FFA | INDUSTRIAL WAREHOUSE bots cannot damage themselves | self hit result=false hp 100 -> 100
+[PASS] FFA | INDUSTRIAL WAREHOUSE bots acquire each other as targets | first acquisition after 0.48 s (A target=none, B target=VIPER)
+[PASS] FFA | INDUSTRIAL WAREHOUSE bots fire at and damage each other | shots A=11 B=14, bot-on-bot damage events=22
+[PASS] FFA | INDUSTRIAL WAREHOUSE bot-vs-bot kill credited to the real attacker | after 4.1 s: RAVEN killed VIPER (killer kills 0 -> 1, victim deaths +1, player kills unchanged 2)
+[PASS] FFA | INDUSTRIAL WAREHOUSE killer drops the dead target | killer target now: none
+[PASS] FFA | INDUSTRIAL WAREHOUSE bot killed by a bot respawns after 3 s, still 3 slots | victim alive=true active=2 nodes=3
+[PASS] FFA | INDUSTRIAL WAREHOUSE observed match: bots fight each other with the player hidden | 60 s: 7 bot-vs-bot kills, 7 bot deaths, player hit 0 times [], scoreboard RAVEN 4/4, HAZARD 3/2, YOU 2/1, VIPER 2/4
+[PASS] FFA | INDUSTRIAL WAREHOUSE no self-targeting and no lingering dead targets | self-target frames=0, frames aiming at a corpse >0.2 s=0
+[PASS] FFA | INDUSTRIAL WAREHOUSE target selection is stable | 8 live-to-live target switches across 3 bots in 60 s
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE WASD movement | W 3.35 m, S -2.21 m, D 2.23 m, A -2.21 m (along facing axes)
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE sprint is faster than walking | walk 5.59 m/s, sprint 8.59 m/s
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE jump | peak height 1.51 m
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE C crouches (1.2 m capsule, lowered camera) | stance=1 shape=CapsuleShape3D height=1.20 eye=1.08
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE crouched: slower movement and shooting works | crouch speed 2.99 m/s, shot fired=true
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE C again stands up | stance=0
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE Z goes prone (box collision, camera near floor) | stance=2 shape=BoxShape3D eye=0.36
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE prone crawling works (slow) | crawled 1.10 m in 1 s
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE cannot sprint or jump while prone | speed with sprint held 1.10 m/s, height change 0.00
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE prone: shoot, switch, reload and scope all work | fire=true switch=true reload=true/true scope=true
+[PASS] MOVEMENT | INDUSTRIAL WAREHOUSE stand-up clearance check (blocked under 0.85 m ceiling, allowed after) | stayed prone on Z=true, on C=true, stance after ceiling removed=0
+[PASS] BOTS | INDUSTRIAL WAREHOUSE still exactly 3 bots after deaths/respawns (no duplicates) | active=3 nodes=3 bot deaths=10
+[PASS] MAPS | URBAN WARFARE loads | match started: true
+[PASS] MAPS | URBAN WARFARE navigation mesh baked and synced | 598 navmesh polygons, map ready=true
+[PASS] MAPS | URBAN WARFARE spawn locations valid (on navmesh, no geometry overlap) | 11 bot + 4 player spawns valid
+[PASS] MAPS | URBAN WARFARE navigation connects all spawns/patrol points (no inaccessible bot positions) | 24 targets reachable from (-30.0, 0.5, -0.25)
+[PASS] BOTS | URBAN WARFARE exactly 3 active bot slots | active=3 nodes=3
+[PASS] BOTS | URBAN WARFARE bots move and navigate | 3/3 bots moved > 1.5 m in 4 s
+[PASS] WEAPONS | URBAN WARFARE assault rifle fires and damages bot | bot HP 100 -> 79, AR ammo 30 -> 29
+[PASS] COMBAT | URBAN WARFARE bot health reaches 0 and bot dies | alive=false after 5 more shots, death events +1, kills +1
+[PASS] COMBAT | URBAN WARFARE no repeated bot death events | death events +1 after extra damage on corpse
+[PASS] HUD | URBAN WARFARE kill counter updates | label: 'KILLS  1      DEATHS  0'
+[PASS] BOTS | URBAN WARFARE bot respawns after 3 seconds | alive at ~2.9 s: false, alive at ~3.3 s: true, active=3
+[PASS] WEAPONS | URBAN WARFARE Q switches to sniper and back | after 1st Q cur=true, after 2nd Q cur=0
+[PASS] WEAPONS | URBAN WARFARE ammo persists across switches | AR ammo 25 -> 25
+[PASS] WEAPONS | URBAN WARFARE switching cannot bypass fire rate | shot1=true, shot ~1.1 s later blocked=true, shot after 1.3 s fired=true
+[PASS] WEAPONS | URBAN WARFARE sniper scope works | scoped=true fov=14.0 overlay=true
+[PASS] WEAPONS | URBAN WARFARE sniper fires and headshot kills | bot HP 100 -> 0 (95 dmg x2.5 head)
+[PASS] WEAPONS | URBAN WARFARE reload refills magazine from reserve | started=true ammo=30 reserve 180 -> 153
+[PASS] HUD | URBAN WARFARE HUD shows real health and ammo | hp label '100' (hp 100), ammo label '30' (ammo 30)
+[PASS] BOTS | URBAN WARFARE bot detects player | bot state=COMBAT awareness=1.00
+[PASS] BOTS | URBAN WARFARE bot aims and fires | 2 shots fired
+[PASS] COMBAT | URBAN WARFARE bot bullets reduce player health | player HP 100 -> 84, 2 hits / 2 shots
+[PASS] HUD | URBAN WARFARE damage indicator shown | 2 active indicators
+[PASS] COMBAT | URBAN WARFARE player death counted exactly once | deaths 0 -> 1, alive=false
+[PASS] HUD | URBAN WARFARE death counter updates | label: 'KILLS  2      DEATHS  1'
+[PASS] COMBAT | URBAN WARFARE player respawns with 100 HP | alive=true hp=100
+[PASS] FFA | URBAN WARFARE bots cannot damage themselves | self hit result=false hp 100 -> 100
+[PASS] FFA | URBAN WARFARE bots acquire each other as targets | first acquisition after 0.48 s (A target=RAVEN, B target=none)
+[PASS] FFA | URBAN WARFARE bots fire at and damage each other | shots A=37 B=36, bot-on-bot damage events=24
+[PASS] FFA | URBAN WARFARE bot-vs-bot kill credited to the real attacker | after 15.4 s: VIPER killed RAVEN (killer kills 0 -> 1, victim deaths +1, player kills unchanged 2)
+[PASS] FFA | URBAN WARFARE killer drops the dead target | killer target now: none
+[PASS] FFA | URBAN WARFARE bot killed by a bot respawns after 3 s, still 3 slots | victim alive=true active=2 nodes=3
+[PASS] FFA | URBAN WARFARE observed match: bots fight each other with the player hidden | 60 s: 7 bot-vs-bot kills, 7 bot deaths, player hit 0 times [], scoreboard VIPER 4/3, HAZARD 3/3, YOU 2/1, RAVEN 2/4
+[PASS] FFA | URBAN WARFARE no self-targeting and no lingering dead targets | self-target frames=0, frames aiming at a corpse >0.2 s=0
+[PASS] FFA | URBAN WARFARE target selection is stable | 7 live-to-live target switches across 3 bots in 60 s
+[PASS] MOVEMENT | URBAN WARFARE WASD movement | W 3.35 m, S -2.21 m, D 2.23 m, A -2.21 m (along facing axes)
+[PASS] MOVEMENT | URBAN WARFARE sprint is faster than walking | walk 5.59 m/s, sprint 8.59 m/s
+[PASS] MOVEMENT | URBAN WARFARE jump | peak height 1.51 m
+[PASS] MOVEMENT | URBAN WARFARE C crouches (1.2 m capsule, lowered camera) | stance=1 shape=CapsuleShape3D height=1.20 eye=1.08
+[PASS] MOVEMENT | URBAN WARFARE crouched: slower movement and shooting works | crouch speed 2.99 m/s, shot fired=true
+[PASS] MOVEMENT | URBAN WARFARE C again stands up | stance=0
+[PASS] MOVEMENT | URBAN WARFARE Z goes prone (box collision, camera near floor) | stance=2 shape=BoxShape3D eye=0.36
+[PASS] MOVEMENT | URBAN WARFARE prone crawling works (slow) | crawled 1.10 m in 1 s
+[PASS] MOVEMENT | URBAN WARFARE cannot sprint or jump while prone | speed with sprint held 1.10 m/s, height change 0.00
+[PASS] MOVEMENT | URBAN WARFARE prone: shoot, switch, reload and scope all work | fire=true switch=true reload=true/true scope=true
+[PASS] MOVEMENT | URBAN WARFARE stand-up clearance check (blocked under 0.85 m ceiling, allowed after) | stayed prone on Z=true, on C=true, stance after ceiling removed=0
+[PASS] BOTS | URBAN WARFARE still exactly 3 bots after deaths/respawns (no duplicates) | active=3 nodes=3 bot deaths=10
+[PASS] MAPS | DESERT OUTPOST loads | match started: true
+[PASS] MAPS | DESERT OUTPOST navigation mesh baked and synced | 816 navmesh polygons, map ready=true
+[PASS] MAPS | DESERT OUTPOST spawn locations valid (on navmesh, no geometry overlap) | 12 bot + 4 player spawns valid
+[PASS] MAPS | DESERT OUTPOST navigation connects all spawns/patrol points (no inaccessible bot positions) | 25 targets reachable from (0.0, 0.5, 30.0)
+[PASS] BOTS | DESERT OUTPOST exactly 3 active bot slots | active=3 nodes=3
+[PASS] BOTS | DESERT OUTPOST bots move and navigate | 3/3 bots moved > 1.5 m in 4 s
+[PASS] WEAPONS | DESERT OUTPOST assault rifle fires and damages bot | bot HP 100 -> 79, AR ammo 30 -> 29
+[PASS] COMBAT | DESERT OUTPOST bot health reaches 0 and bot dies | alive=false after 5 more shots, death events +1, kills +1
+[PASS] COMBAT | DESERT OUTPOST no repeated bot death events | death events +1 after extra damage on corpse
+[PASS] HUD | DESERT OUTPOST kill counter updates | label: 'KILLS  1      DEATHS  0'
+[PASS] BOTS | DESERT OUTPOST bot respawns after 3 seconds | alive at ~2.9 s: false, alive at ~3.3 s: true, active=3
+[PASS] WEAPONS | DESERT OUTPOST Q switches to sniper and back | after 1st Q cur=true, after 2nd Q cur=0
+[PASS] WEAPONS | DESERT OUTPOST ammo persists across switches | AR ammo 25 -> 25
+[PASS] WEAPONS | DESERT OUTPOST switching cannot bypass fire rate | shot1=true, shot ~1.1 s later blocked=true, shot after 1.3 s fired=true
+[PASS] WEAPONS | DESERT OUTPOST sniper scope works | scoped=true fov=14.0 overlay=true
+[PASS] WEAPONS | DESERT OUTPOST sniper fires and headshot kills | bot HP 100 -> 0 (95 dmg x2.5 head)
+[PASS] WEAPONS | DESERT OUTPOST reload refills magazine from reserve | started=true ammo=30 reserve 180 -> 153
+[PASS] HUD | DESERT OUTPOST HUD shows real health and ammo | hp label '100' (hp 100), ammo label '30' (ammo 30)
+[PASS] BOTS | DESERT OUTPOST bot detects player | bot state=COMBAT awareness=1.00
+[PASS] BOTS | DESERT OUTPOST bot aims and fires | 22 shots fired
+[PASS] COMBAT | DESERT OUTPOST bot bullets reduce player health | player HP 100 -> 84, 2 hits / 22 shots
+[PASS] HUD | DESERT OUTPOST damage indicator shown | 1 active indicators
+[PASS] COMBAT | DESERT OUTPOST player death counted exactly once | deaths 0 -> 1, alive=false
+[PASS] HUD | DESERT OUTPOST death counter updates | label: 'KILLS  2      DEATHS  1'
+[PASS] COMBAT | DESERT OUTPOST player respawns with 100 HP | alive=true hp=100
+[PASS] FFA | DESERT OUTPOST bots cannot damage themselves | self hit result=false hp 100 -> 100
+[PASS] FFA | DESERT OUTPOST bots acquire each other as targets | first acquisition after 0.48 s (A target=none, B target=VIPER)
+[PASS] FFA | DESERT OUTPOST bots fire at and damage each other | shots A=87 B=86, bot-on-bot damage events=24
+[PASS] FFA | DESERT OUTPOST bot-vs-bot kill credited to the real attacker | after 35.7 s: RAVEN killed VIPER (killer kills 0 -> 1, victim deaths +1, player kills unchanged 2)
+[PASS] FFA | DESERT OUTPOST killer drops the dead target | killer target now: none
+[PASS] FFA | DESERT OUTPOST bot killed by a bot respawns after 3 s, still 3 slots | victim alive=true active=2 nodes=3
+[PASS] FFA | DESERT OUTPOST observed match: bots fight each other with the player hidden | 60 s: 4 bot-vs-bot kills, 4 bot deaths, player hit 0 times [], scoreboard HAZARD 3/1, YOU 2/1, RAVEN 2/3, VIPER 1/3
+[PASS] FFA | DESERT OUTPOST no self-targeting and no lingering dead targets | self-target frames=0, frames aiming at a corpse >0.2 s=0
+[PASS] FFA | DESERT OUTPOST target selection is stable | 0 live-to-live target switches across 3 bots in 60 s
+[PASS] MOVEMENT | DESERT OUTPOST WASD movement | W 3.35 m, S -2.21 m, D 2.23 m, A -2.21 m (along facing axes)
+[PASS] MOVEMENT | DESERT OUTPOST sprint is faster than walking | walk 5.59 m/s, sprint 8.59 m/s
+[PASS] MOVEMENT | DESERT OUTPOST jump | peak height 1.51 m
+[PASS] MOVEMENT | DESERT OUTPOST C crouches (1.2 m capsule, lowered camera) | stance=1 shape=CapsuleShape3D height=1.20 eye=1.08
+[PASS] MOVEMENT | DESERT OUTPOST crouched: slower movement and shooting works | crouch speed 2.99 m/s, shot fired=true
+[PASS] MOVEMENT | DESERT OUTPOST C again stands up | stance=0
+[PASS] MOVEMENT | DESERT OUTPOST Z goes prone (box collision, camera near floor) | stance=2 shape=BoxShape3D eye=0.36
+[PASS] MOVEMENT | DESERT OUTPOST prone crawling works (slow) | crawled 1.10 m in 1 s
+[PASS] MOVEMENT | DESERT OUTPOST cannot sprint or jump while prone | speed with sprint held 1.10 m/s, height change 0.00
+[PASS] MOVEMENT | DESERT OUTPOST prone: shoot, switch, reload and scope all work | fire=true switch=true reload=true/true scope=true
+[PASS] MOVEMENT | DESERT OUTPOST stand-up clearance check (blocked under 0.85 m ceiling, allowed after) | stayed prone on Z=true, on C=true, stance after ceiling removed=0
+[PASS] BOTS | DESERT OUTPOST still exactly 3 bots after deaths/respawns (no duplicates) | active=3 nodes=3 bot deaths=7
+[PASS] MENUS | Pause opens pause menu and freezes gameplay | paused=true menu visible=true player time advanced=false
+[PASS] MENUS | Settings from pause menu opens and closes | opened=true closed=true still paused=true
+[PASS] MENUS | Resume unpauses | paused=false
+[PASS] MENUS | ESC toggles pause | after 1st ESC paused=true, after 2nd ESC paused=false
+[PASS] MENUS | Restart Match reloads the map | new match=true kills=0 bots=3
+[PASS] MENUS | Main Menu returns to title screen | match freed=true menu=res://scripts/ui/main_menu.gd paused=false
+TESTS DONE: 153 results, 0 failed

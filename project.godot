@@ -1,0 +1,49 @@
+; Engine configuration file.
+; Godot 4.7 project for CombatArena.
+
+config_version=5
+
+[application]
+
+config/name="CombatArena"
+config/description="Single-player offline first-person arena shooter."
+config/version="1.0.0"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.7", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Settings="*res://scripts/autoload/settings.gd"
+Sfx="*res://scripts/autoload/sfx.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[layer_names]
+
+3d_physics/layer_1="world"
+3d_physics/layer_2="player"
+3d_physics/layer_3="bots"
+
+[physics]
+
+common/physics_ticks_per_second=60
+
+[rendering]
+
+occlusion_culling/use_occlusion_culling=true
+mesh_lod/lod_change/threshold_pixels=4.0
+
+renderer/rendering_method="forward_plus"
+environment/ssao/half_size=true
+environment/ssao/quality=0
+environment/ssao/blur_passes=1
+lights_and_shadows/directional_shadow/size=2048
+textures/default_filters/anisotropic_filtering_level=2
